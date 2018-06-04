@@ -6,16 +6,6 @@ class Task extends Component
     {
         super(props);
 
-        this.state = {
-
-            isComplete: this.props.isComplete,
-            text: this.props.text,
-
-            index: this.props.index,
-            changeMethod: this.props.changeMethod,
-            deleteMethod: this.props.deleteMethod,
-        }
-
         // bind
         this.changeTask = this.changeTask.bind(this);
         this.deleteTask = this.deleteTask.bind(this);

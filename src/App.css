@@ -51,7 +51,7 @@ body {
 
 .task
 {
-  display: inline-flex;
+  display: inline-block;
   margin: 5px;
   padding: 10px;
   border: 1px rgb(136, 136, 136) solid;
@@ -71,6 +71,7 @@ body {
 {
   padding: 10px;
   color: red;
+  word-wrap: break-word;
 }
 
 
@@ -80,4 +81,5 @@ body {
   padding: 10px;
   text-decoration: line-through;
   color: black;
+  word-wrap: break-word;
 }
