@@ -1,28 +1,84 @@
-.App {
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.content-area {
+  margin: 30px;
+}
+.input-area {
+  margin: 25px;
+}
+.task-text {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.hidden {
+  display: none;
+}
+.delete-icon-area {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.delete-icon {
+  color: red;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+
+
+.taskheader
+{
+  width: 50%;
+  text-align: center;
+  margin: auto;
 }
 
-.App-title {
-  font-size: 1.5em;
+
+
+.tasklist
+{ 
+  display: flex;
+  width: 50%;
+  margin: auto;
+  flex-direction: column;
 }
 
-.App-intro {
-  font-size: large;
+
+
+.task
+{
+  display: inline-flex;
+  background-color: rgb(226, 226, 226);
+  margin: 20px;
+  padding: 10px;
+  border: 1px blue solid;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+
+.task .deletetaskbutton
+{
+  margin: 10px;
+}
+
+
+
+.task .incompletetask
+{
+  padding: 10px;
+  color: red;
+}
+
+
+
+.task .completetask 
+{
+  padding: 10px;
+  text-decoration: line-through;
+  color: black;
 }
