@@ -52,10 +52,9 @@ body {
 .task
 {
   display: inline-flex;
-  background-color: rgb(226, 226, 226);
-  margin: 20px;
+  margin: 5px;
   padding: 10px;
-  border: 1px blue solid;
+  border: 1px rgb(136, 136, 136) solid;
   border-radius: 10px;
 }
 

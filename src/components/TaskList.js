@@ -18,7 +18,7 @@ class TaskList extends Component
       // generate fake tasks if none are in local storage
       if(this.state.tasks == null)
       {
-          this.state.tasks = [{isComplete: false, task: "Finish ToDo List"}, {isComplete: true, task: "Turn in Weather App"}];
+          this.state.tasks = [{isComplete: false, text: "Finish ToDo List"}, {isComplete: true, text: "Turn in Weather App"}];
       }
 
       // bind
@@ -42,7 +42,14 @@ class TaskList extends Component
             <ul className="tasklist">
                 {
                     this.state.tasks.map(
-                        (taskToPass, index) => {return <Task task={taskToPass.task} isComplete={taskToPass.isComplete} index={index} changeMethod={this.change} deleteMethod={this.delete}/>}
+                        (taskToPass, index) => {
+                            return <Task 
+                            text={taskToPass.text} 
+                            isComplete={taskToPass.isComplete} 
+                            index={index} 
+                            changeMethod={this.change} 
+                            deleteMethod={this.delete}/>
+                        }
                     )
                 }
             </ul>

@@ -7,8 +7,10 @@ class Task extends Component
         super(props);
 
         this.state = {
+
             isComplete: this.props.isComplete,
-            task: this.props.task,
+            text: this.props.text,
+
             index: this.props.index,
             changeMethod: this.props.changeMethod,
             deleteMethod: this.props.deleteMethod,
@@ -26,13 +28,13 @@ class Task extends Component
     return (
         <li className="task">
 
-            <input className="toggletaskstatus" type="checkbox" value="" checked={this.state.isComplete ? "checked" : ""} onClick={this.changeTask}/>
+            <input className="toggletaskstatus" type="checkbox" value="" checked={this.props.isComplete ? "checked" : ""} onChange={this.changeTask}/>
 
-            <span className={this.state.isComplete ? "completetask" : "incompletetask"}>
-                {this.state.task}
+            <span className={this.props.isComplete ? "completetask" : "incompletetask"}>
+                {this.props.text}
             </span>
 
-            <button className="" className="deletetaskbutton" onClick={this.deleteTask}>Delete</button>
+            <button className="deletetaskbutton" onClick={this.deleteTask}>Delete</button>
 
         </li>
     );
@@ -42,16 +44,15 @@ class Task extends Component
 
   changeTask()
   {
-    this.setState({isComplete: !this.state.isComplete});
-    this.state.changeMethod({isComplete: !this.state.isComplete, task: this.state.task}, this.state.index);
+    this.setState({isComplete: !this.props.isComplete});
+    this.props.changeMethod({isComplete: !this.props.isComplete, text: this.props.text}, this.props.index);
   }
 
 
 
   deleteTask()
   {
-    console.log(this.state.index);
-    this.state.deleteMethod(this.state.index);
+    this.props.deleteMethod(this.props.index);
   }
 }
 

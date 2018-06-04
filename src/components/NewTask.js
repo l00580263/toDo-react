@@ -26,7 +26,7 @@ class NewTask extends Component
     // clear form
     input.value = "";
     // add task
-    this.props.addMethod({isComplete: false, task: taskText});
+    this.props.addMethod({isComplete: false, text: taskText});
   }
 }
 
